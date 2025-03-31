@@ -1,0 +1,135 @@
+:root {
+    /* background */
+    --bg-gradiant-1: #060912;
+    --bg-gradient-2: #1d283f;
+    --bg-header: #111827;
+    --bg-card: #111827;
+    --bg-btn: #425786;
+
+    /* text */
+    --white-text: #ffffff;
+    --lighter-text: #8290a4;
+
+    /* border */
+    --border: 2px solid #1F2937;
+    --border-radius: 25px;
+
+    /* other */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+    
+    /* spacing variables for consistent padding/margins */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Navbar === */
+.navbar {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    position: fixed;
+    background: var(--bg-header);
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    top: 0;
+    left: 50%;
+    border-radius: var(--border-radius);
+    border: var(--border);
+    transform: translateX(-50%) translateY(25px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo-image {
+    width: 40px;
+    height: auto;
+    transition: var(--transition);
+}
+
+.nav-logo:hover {
+    transform: rotate(5deg);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 5px;
+}
+
+.nav-links a {
+    color: var(--lighter-text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--white-text);
+    transform: scale(1.1);
+}
+
+.nav-button a {
+    background-color: var(--bg-btn);
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+    color: var(--lighter-text);
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.nav-button a:hover {
+    background-color: var(--white-text);
+    color: var(--bg-header);
+}
+
+.nav-site-name {
+    color: var(--lighter-text);
+    font-size: 1rem;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 1199px) {
+    .nav-site-name {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        padding: 1rem 2rem;
+        display: flex;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+    
+    .nav-button a {
+        padding: 0.7rem 2rem;
+        font-size: 1.1rem;
+    }
+}

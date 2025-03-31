@@ -1,0 +1,172 @@
+.license-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 6rem 1.5rem; 
+}
+
+.license-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.license-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+.license-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.license-header p {
+    color: var(--gray-text);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.license-content {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.summary-section {
+    background: linear-gradient(to bottom, var(--card-hover), var(--card-bg));
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.summary-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.license-section {
+    margin-bottom: 3rem;
+}
+
+.license-section:last-child {
+    margin-bottom: 0;
+}
+
+.license-section h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.license-section h2 i {
+    margin-right: 0.75rem;
+    opacity: 0.8;
+}
+
+.license-section ol {
+    list-style: none;
+    counter-reset: license-counter;
+    padding: 0;
+    margin: 0;
+}
+
+.license-section ol > li {
+    counter-increment: license-counter;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.license-section ol > li::before {
+    content: counter(license-counter) ". ";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.license-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.license-section ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--gray-text);
+}
+
+.license-section ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.warranty-section {
+    background-color: rgba(24, 191, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+    border: 1px solid rgba(24, 191, 255, 0.2);
+    color: var(--gray-text);
+}
+
+.consequences-section {
+    background-color: rgba(248, 113, 113, 0.1);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin: 2rem 0;
+    border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+.consequences-section h3 {
+    color: #F87171;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.last-updated {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--gray-text);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .license-container {
+        padding: 4rem 1rem;
+    }
+
+    .license-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .license-content {
+        padding: 1.5rem;
+    }
+}
