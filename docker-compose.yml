@@ -1,10 +1,7 @@
 services:
   web:
-    image: nginx:latest
+    build: .
     container_name: matsfx-legal
     ports:
       - "${PORT}:80"
-    volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - .:/usr/share/nginx/html:ro
     restart: unless-stopped
